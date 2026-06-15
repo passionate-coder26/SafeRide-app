@@ -1,50 +1,44 @@
-# Welcome to your Expo app 👋
+# 🛡️ SafeRide: Your Safety, Automated.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> **🚨 EVALUATOR NOTE FOR LIVE DEMO 🚨**
+> SafeRide is a native mobile application built with React Native and Expo, deployed to the web via Vercel for ease of access. 
+> **To experience the intended UI:** Please open the live link on a desktop browser, press `F12` to open Developer Tools, and click the `Toggle Device Toolbar` icon (or press `Ctrl+Shift+M`) to view the application in mobile proportions.
 
-## Get started
+### 🔗 Links
+* **Live Demo:** [https://safe-ride-app.vercel.app](https://safe-ride-app.vercel.app)
+* **Video Presentation:** [Insert Link Here (Optional)]
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📌 The Problem
+Women frequently face safety concerns during daily commutes in cabs or auto-rickshaws, lacking a reliable way to verify a vehicle's legitimacy before boarding. Existing applications typically require manual intervention or button presses during high-stress emergencies, which isn't always possible. 
 
-2. Start the app
+## 💡 The Solution
+SafeRide acts as a proactive, automated guardian. We shift the focus from reactive SOS buttons to preventative verification and automated tracking.
 
-   ```bash
-   npx expo start
-   ```
+### Core Features:
+* **Instant RTO Verification:** Passengers can instantly verify a vehicle's registration data and legitimacy before ever stepping inside.
+* **Automated Live Tracking:** Once a trip begins, SafeRide automatically enforces live-GPS tracking, sending status updates and a tracking link via WhatsApp to pre-selected emergency contacts.
+* **Community-Driven Safety:** A robust passenger rating and vehicle flagging system that warns future riders about potentially unsafe drivers or vehicles.
+* **Seamless UI/UX:** A fully custom, dark-mode optimized interface built for speed and clarity during high-stress situations.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛠️ Technology Stack
+* **Frontend:** React Native, Expo, Expo Router
+* **Backend & Database:** Firebase (Authentication & Firestore)
+* **APIs & Integrations:** 
+  * Twilio API (Automated WhatsApp/SMS alerts)
+  * RapidAPI / RTO Database (Vehicle verification)
+* **Deployment:** Vercel (Web build)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🚀 Running the Project Locally
 
-When you're ready, run:
+If you would like to run the mobile application locally using the Expo Go app or an emulator, follow these steps:
 
+**1. Clone the repository**
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone [https://github.com/passionate-coder26/SafeRide-app.git](https://github.com/passionate-coder26/SafeRide-app.git)
+cd SafeRide-app
