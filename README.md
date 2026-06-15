@@ -24,6 +24,20 @@ SafeRide acts as a proactive, automated guardian. We shift the focus from reacti
 
 ---
 
+## 🚶‍♀️ The User Flow
+
+Here is the step-by-step journey of a passenger using SafeRide:
+
+1. **Authentication:** The user securely registers or logs into the platform (powered by Firebase Auth).
+2. **Vehicle Verification:** Before boarding a cab or auto, the user enters the vehicle's license plate number. SafeRide instantly queries the RTO database to confirm the vehicle's registration details, maker, and model.
+3. **Contact Selection:** The user selects their designated emergency contacts from their profile.
+4. **Trip Initiation & Automated Alert:** The user taps "Start Trip." SafeRide immediately triggers a Twilio-powered WhatsApp alert to the emergency contacts, providing the vehicle details and a live tracking link.
+5. **Active Monitoring:** The passenger enjoys their ride while SafeRide monitors the active trip. The emergency contacts can track the live location entirely via the web link—no app download required.
+6. **Trip Completion:** Upon reaching the destination, the user ends the trip. A final "Safe Arrival" automated WhatsApp message is sent to the contacts.
+7. **Community Rating:** The user rates their experience and flags any suspicious behavior, updating the global database to protect future passengers.
+
+---
+
 ## 🛠️ Technology Stack
 * **Frontend:** React Native, Expo, Expo Router
 * **Backend & Database:** Firebase (Authentication & Firestore)
@@ -39,6 +53,20 @@ SafeRide acts as a proactive, automated guardian. We shift the focus from reacti
 If you would like to run the mobile application locally using the Expo Go app or an emulator, follow these steps:
 
 **1. Clone the repository**
-```bash
-git clone [https://github.com/passionate-coder26/SafeRide-app.git](https://github.com/passionate-coder26/SafeRide-app.git)
-cd SafeRide-app
+    git clone https://github.com/passionate-coder26/SafeRide-app.git
+    cd SafeRide-app
+
+**2. Install dependencies**
+    npm install
+
+**3. Environment Variables**
+Create a .env file in the root directory and add the necessary API keys:
+    EXPO_PUBLIC_TWILIO_ACCOUNT_SID=your_account_sid
+    EXPO_PUBLIC_TWILIO_AUTH_TOKEN=your_auth_token
+
+**4. Start the Expo server**
+    npx expo start
+
+*Press 'w' to open in a web browser, 'a' for Android emulator, or 'i' for iOS simulator.*
+
+---
