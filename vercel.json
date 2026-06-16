@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/twilio/:path*",
+      "destination": "https://api.twilio.com/2010-04-01/Accounts/:path*"
+    }
+  ]
+}

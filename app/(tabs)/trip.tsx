@@ -103,7 +103,7 @@ export default function TripScreen() {
     
     const startTrip = async () => {
 
-        const twilioUrl = `https://corsproxy.io/?https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+        const twilioUrl = `/api/twilio/${accountSid}/Messages.json`;
 
         setLoading(true);
         try {
@@ -200,7 +200,7 @@ export default function TripScreen() {
     };
 
     const endTrip = async () => {
-        const twilioUrl = `https://corsproxy.io/?https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+        const twilioUrl = `/api/twilio/${accountSid}/Messages.json`;
 
         clearInterval(locationInterval.current);
         clearInterval(timerInterval.current);
