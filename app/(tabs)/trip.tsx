@@ -98,10 +98,13 @@ export default function TripScreen() {
         );
     };
 
-    const accountSid = process.env.EXPO_PUBLIC_TWILIO_ACCOUNT_SID;
-    const authToken = process.env.EXPO_PUBLIC_TWILIO_AUTH_TOKEN;
-
+        const accountSid = process.env.EXPO_PUBLIC_TWILIO_ACCOUNT_SID;
+        const authToken = process.env.EXPO_PUBLIC_TWILIO_AUTH_TOKEN;
+    
     const startTrip = async () => {
+
+        const twilioUrl = `https://corsproxy.io/?https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+
         setLoading(true);
         try {
             const { status } = await Location.requestForegroundPermissionsAsync();
@@ -145,10 +148,10 @@ export default function TripScreen() {
                     const trackingUrl = `https://saferide-tracking.vercel.app/track/${token}`;
 
                     for (const contact of contacts) {
-                        const smsResponse = await fetch('https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json', {
+                        const smsResponse = await fetch(twilioUrl, {
                             method: 'POST',
                             headers: {
-                                'Authorization': 'Basic ' + toBase64('${accountSid}:${authToken}'),
+                                'Authorization': 'Basic ' + toBase64(`${accountSid}:${authToken}`),
                                 'Content-Type': 'application/x-www-form-urlencoded',
                             },
                             body: new URLSearchParams({
@@ -197,6 +200,8 @@ export default function TripScreen() {
     };
 
     const endTrip = async () => {
+        const twilioUrl = `https://corsproxy.io/?https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+
         clearInterval(locationInterval.current);
         clearInterval(timerInterval.current);
 
@@ -215,10 +220,10 @@ export default function TripScreen() {
                 const contacts = profile.emergencyContacts || [];
 
                 for (const contact of contacts) {
-                    await fetch('https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json', {
+                    await fetch(twilioUrl, {
                         method: 'POST',
                         headers: {
-                            'Authorization': 'Basic ' + toBase64('${accountSid}:${authToken}'),
+                            'Authorization': 'Basic ' + toBase64(`${accountSid}:${authToken}`),
                             'Content-Type': 'application/x-www-form-urlencoded',
                         },
                         body: new URLSearchParams({
