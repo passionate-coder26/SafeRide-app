@@ -293,7 +293,7 @@ export default function HomeScreen() {
           {isMocked && (
             <View style={styles.mockWarningBanner}>
               <Text style={styles.mockWarningText}>
-                ⚠️ **API Limit Fallback:** Real-time Indian RTO databases have strict request caps. Showing high-fidelity simulated vehicle metrics for continuous evaluation flow.
+                ⚠️ **Development Quota Reached:** The free-tier API limit for live RTO data has been exhausted. Showing simulated data for evaluation. Production versions use premium subscriptions, unrestricted access.
               </Text>
             </View>
           )}
