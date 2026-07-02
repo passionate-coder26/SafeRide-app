@@ -1,9 +1,9 @@
 # 🛡️ SafeRide: Your Safety, Automated.
 
 > **🚨 EVALUATOR NOTE FOR LIVE DEMO 🚨**
-> SafeRide is a native mobile application built with React Native and Expo, deployed to the web via Vercel for ease of access. 
-> **To experience the intended UI:** Please open the live link on a desktop browser, press `F12` to open Developer Tools, and click the `Toggle Device Toolbar` icon (or press `Ctrl+Shift+M`) to view the application in mobile proportions.
-> **WhatsApp Tracking Alerts:** Since this is a prototype using the Twilio Sandbox, emergency contacts must send a one-time opt-in code to the Twilio number to receive messages. *In a production environment with a registered business account, this step is completely removed and alerts are sent automatically.
+> > SafeRide is a native mobile application built with React Native and Expo, deployed to the web via Vercel for ease of access. 
+> > **To experience the intended UI:** Please open the live link on a desktop browser, press `F12` to open Developer Tools, and click the `Toggle Device Toolbar` icon (or press `Ctrl+Shift+M`) to view the application in mobile proportions.
+> > **WhatsApp Tracking Alerts:** Since this is a prototype using the Twilio Sandbox, emergency contacts must send a one-time opt-in code to the Twilio number to receive messages. *In a production environment with a registered business account, this step is completely removed and alerts are sent automatically.
 > > * **RTO API Limits:** Due to strict free-tier rate limits on real-time Indian RTO databases, the live prototype includes a seamless fallback system. If the third-party API quota is exceeded during evaluation, the app will automatically display high-fidelity simulated vehicle metrics, ensuring you can evaluate the complete user flow without interruption.
 
 ### 🔗 Links
